@@ -5,10 +5,8 @@ class: text-center
 highlighter: shiki
 lineNumbers: false
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
+  ## Css share
+  CSS 创意分享
 drawings:
   persist: false
 transition: slide-left
@@ -18,7 +16,7 @@ mdc: true
 
 # CSS 创意分享
 
-Presentation slides for developers
+Orion Ye
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -27,10 +25,7 @@ Presentation slides for developers
 </div>
 
 <div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
+  <a href="https://github.com/ikomom/css-share-slidev" target="_blank" alt="GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
@@ -44,22 +39,20 @@ The last comment block of each slide will be treated as slide notes. It will be 
 transition: fade-out
 ---
 
-# What is Slidev?
+# 分享内容
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+常见的css有不常见的用法
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+- 📝 **布局** - layout
+- 🎨 **阴影** - shadow
+- 🧑‍💻 **渐变** - gradient
+- 🤹 **混合模式** - blend mode
+- 🎥 **滤镜** - filter
+- 📤 **SVG 滤镜** - svg filter
+- 🛠 **伪元素** - pseudo element
+- 🌊 **波浪效果** - wave effect
+- 🦼 **滚动视差** - scrolling parallax
+- ✨ **3D**
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -83,42 +76,14 @@ Here is another comment.
 -->
 
 ---
-layout: default
+src: ./pages/layout.md
+hide: false
 ---
 
-# Table of contents
-
-```html
-<Toc minDepth="1" maxDepth="1"></Toc>
-```
-
-<Toc maxDepth="1"></Toc>
-
 ---
-transition: slide-up
-level: 2
+src: ./pages/shadow.md
+hide: false
 ---
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
 layout: image-right
@@ -311,6 +276,11 @@ const final = {
 </div>
 
 ---
+src: ./pages/multiple-entries.md
+hide: false
+---
+
+---
 
 # LaTeX
 
@@ -417,11 +387,6 @@ database "MySql" {
 </div>
 
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
----
-src: ./pages/multiple-entries.md
-hide: false
----
 
 ---
 layout: center
