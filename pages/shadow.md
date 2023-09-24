@@ -5,7 +5,7 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 
 # 阴影
 
-box-shadow
+shadow
 
 <v-clicks>
 
@@ -45,7 +45,8 @@ box-shadow
 
 ---
 
-#### 阴影多重边框
+
+# 阴影多重边框
 
 模拟出的边框不占宽度
 
@@ -80,7 +81,49 @@ div.bgShadow9 {
 
 ---
 
-#### loading效果
+# 不规则边框
+
+当不规则图形想要添加边框时，可以通过drop-shadow模拟边框和光晕效果
+
+```css
+{
+    filter: 
+        drop-shadow(0px 0px 1px blue)
+        drop-shadow(0px 0px 1px blue)
+        drop-shadow(0px 0px 1px blue);
+}
+```
+<div flex m-10 gap-10 justify-center items-center>
+<div class="g-button-unregular-border"></div>
+<div class="g-button-unregular-border spread"></div>
+</div>
+
+
+<style>
+.g-button-unregular-border {
+    position: relative;
+    width: 200px;
+    height: 80px;
+    filter: drop-shadow(0px 0px 1px blue) drop-shadow(0px 0px 1px blue) drop-shadow(0px 0px 1px blue);
+}
+
+.spread {
+    filter: drop-shadow(0px 0px 1px blue) drop-shadow(0px 0px 12px yellow) drop-shadow(0px 0px 14px red);
+}
+
+.g-button-unregular-border::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    clip-path: polygon(85% 0%, 100% 50%, 85% 100%, 0% 100%, 0% 0%);
+    background: #f44336;
+}
+</style>
+
+
+---
+
+# loading效果
 
 通过内阴影和动画制造loading效果
 
@@ -100,7 +143,7 @@ div.bgShadow9 {
 
 ---
 
-#### 投影阴影
+# 投影阴影
 
 灯光照射效果, css的阴影无法实现。这时可以用transform模仿阴影
 
@@ -141,7 +184,7 @@ div.bgShadow9 {
 
 ---
 
-#### 阴影按钮
+# 阴影按钮
 
 - 立体: 通过阴影加transform结合
 
@@ -234,5 +277,88 @@ div.bgSolidShadow2 {
 .g-button-relief:active {
     box-shadow: 0 0 0 rgb(0 0 0 / 40%), 0 0 0 rgb(58 127 181), inset -5px -5px 9px rgb(58 127 181), inset 5px 5px 9px rgb(0 0 0 / 40%);
     text-shadow: 1.5px 1.5px 1.5px #fff, -1.5px -1.5px 1.5px #000;
+}
+</style>
+
+---
+class: 'bg-black'
+---
+
+# 抖音 LOGO
+<p text-white>利用shadow / drop-shadow / filter单标签实现 Logo</p>
+
+<div class="tiktok"></div>
+
+<style>
+.bg-black{
+    background: #1b1b1b;
+}
+.tiktok {
+    position: relative;
+    width: 37px;
+    height: 218px;
+    margin: 30px auto!important;
+    background: #fff;
+    filter: drop-shadow(-10px -10px 0 #24f6f0) contrast(150%) brightness(110%);
+    box-shadow: 11.6px 10px 0 0 #fe2d52;
+    z-index: 10;
+    animation: TikTokmove 5s infinite ease-in;
+}
+.tiktok::before {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border: 37px solid #fff;
+    border-top: 37px solid transparent;
+    border-radius: 50%;
+    top: 137px;
+    left: -123px;
+    transform: rotate(45deg);
+    filter: drop-shadow(16px 0px 0 #fe2d52);
+}
+
+.tiktok::after {
+    content: "";
+    position: absolute;
+    width: 143px;
+    height: 140px;
+    border: 25px solid transparent;
+    border-bottom-color: #fff;
+    top: -69px;
+    right: -121px;
+    border-radius: 100%;
+    transform: rotate(45deg);
+    z-index: -10;
+    filter: drop-shadow(14px 0 0 #fe2d52);
+}
+
+@keyframes TikTokmove {
+    4% {
+        transform: skewX(7deg) translate(-30px);
+    }
+    
+    7% {
+        transform: skewX(-6deg) translate(18px);
+    }
+    9% {
+        transform: skewX(5deg) translate(-8px);
+    }
+    10% {
+        transform: skewX(-4deg)translate(6px);
+    }
+    11% {
+        transform: skewX(3deg)translate(-4px);
+    }
+    12% {
+        transform: skewX(-2deg) translate(2px);
+    }
+    13% {
+        transform: skewX(1deg) translate(0px);
+        filter: drop-shadow(-10px -10px 0 #24f6f0) contrast(120%) brightness(110%) blur(3px);
+    }
+    30% {
+        filter: drop-shadow(-10px -10px 0 #24f6f0) contrast(150%) brightness(120%) blur(0px);
+    }
 }
 </style>

@@ -4,28 +4,30 @@ title: 布局
 
 # 布局
 
-#### margin: auto可以实现水平居中 
+#### 如何实现居中效果？
 
-<v-click>
+<v-clicks>
+
+margin: auto可以实现**水平居中**
+
 <p>
 在 flex 格式化上下文中，设置了 margin: auto 的元素，在通过 justify-content 和 align-self 进行对齐之前
 
 任何正处于**空闲的空间**都会分配到该方向的自动 margin 中去， 实现**垂直居中**效果
 
 </p>
-<iframe height="300" style="width: 100%;" scrolling="no" title="最便捷的垂直居中方式 -- flex + margin:auto" src="https://codepen.io/ikomom/embed/PoXQRjg?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="280" style="width: 100%;" scrolling="no" title="最便捷的垂直居中方式 -- flex + margin:auto" src="https://codepen.io/ikomom/embed/PoXQRjg?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/ikomom/pen/PoXQRjg">
   最便捷的垂直居中方式 -- flex + margin:auto</a> by ikomom (<a href="https://codepen.io/ikomom">@ikomom</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
-</v-click>
+</v-clicks>
 
 ---
 
-### 导航栏
+# 导航栏
 
-<br/>
 <img src="https://chokcoco.github.io/demo/ppt/images/cssmagic/bg-margin.png">
 
 ```html
@@ -51,10 +53,9 @@ title: 布局
 
 ---
 
-### 底栏固定
+# 底栏固定
 
-<br/>
-<iframe height="400" style="width: 100%;" scrolling="no" title="layout-bottom-fixed" src="https://codepen.io/ikomom/embed/gOZveeJ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="450" style="width: 100%;" scrolling="no" title="layout-bottom-fixed" src="https://codepen.io/ikomom/embed/gOZveeJ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/ikomom/pen/gOZveeJ">
   layout-bottom-fixed</a> by ikomom (<a href="https://codepen.io/ikomom">@ikomom</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -62,7 +63,7 @@ title: 布局
 
 ---
 
-### 不规则布局
+# 不规则布局
 
 如何实现不规则布局效果? 比如平行四边形、三角形、多边形?
 
@@ -102,5 +103,5 @@ clip-path: polygon(0px 0px, 0px 300px, 100px 300px);
 layout: full
 ---
 
-#### 图文混排
-<iframe src="https://codepen.io/netsi1964/embed/gLvyxj/?height=265&theme-id=1&default-tab=result" width="100%" height="100%"/>
+# 图文混排
+<iframe src="https://codepen.io/netsi1964/embed/gLvyxj/?height=265&theme-id=1&default-tab=result" width="100%" height="95%"/>
