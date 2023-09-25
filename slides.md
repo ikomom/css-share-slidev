@@ -92,11 +92,6 @@ hide: false
 ---
 
 ---
-src: ./pages/shadow.md
-hide: false
----
-
----
 src: ./pages/gradient.md
 hide: false
 ---
