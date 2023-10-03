@@ -46,9 +46,10 @@ transition: fade-out
 - 📝 **布局** - layout
 - 🎨 **阴影** - shadow
 - 🧑‍💻 **渐变** - gradient
-- 🤹 **混合模式** - blend mode
 
-[//]: # (- 🎥 **滤镜** - filter)
+[//]: # (- 🤹 **混合模式** - blend mode)
+
+- 🎥 **滤镜** - filter
 
 [//]: # (- 📤 **SVG 滤镜** - svg filter)
 
@@ -93,6 +94,11 @@ hide: false
 
 ---
 src: ./pages/gradient.md
+hide: false
+---
+
+---
+src: ./pages/filter.md
 hide: false
 ---
 
